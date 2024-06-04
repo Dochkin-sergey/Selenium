@@ -30,8 +30,6 @@ public class MainPageTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.bing.com/");
-
-
     }
 
     @AfterEach
@@ -45,11 +43,8 @@ public class MainPageTest {
         WebElement searchField = driver.findElement(By.cssSelector("#sb_form_q"));
         searchField.sendKeys(input);
         searchField.submit();
-
         WebElement searchPageField = driver.findElement(By.cssSelector("#sb_form_q"));
         assertEquals(input, searchPageField.getAttribute("value"));
-
-
     }
 
     @Test
