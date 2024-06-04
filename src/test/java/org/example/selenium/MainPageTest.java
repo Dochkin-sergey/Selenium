@@ -2,6 +2,7 @@ package org.example.selenium;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -47,6 +48,7 @@ public class MainPageTest {
         assertEquals(input, searchPageField.getAttribute("value"));
     }
 
+    @DisplayName("URL")
     @Test
     public void url() {
         String input = "Selenium";
